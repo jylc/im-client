@@ -11,4 +11,14 @@ module.exports = {
       return args
     })
   },
+  devServer: {
+    proxy: {
+      '': {
+        target: 'http://127.0.0.1:9999',
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {},
+      },
+    },
+  },
 }
