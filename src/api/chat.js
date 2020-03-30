@@ -1,9 +1,9 @@
 import { request } from '@/utils/request'
 
-export function sendMessage(url, data) {
+export function sendMessage(data) {
   return request({
     method: 'POST',
     data: data,
-    url: url,
+    url: '/chat/send',
   })
 }
